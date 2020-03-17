@@ -40,7 +40,7 @@
 		7AB212D8241BD7E0008BDD14 = {
 			isa = PBXGroup;
 			children = (
-				7AB212E3241BD7E1008BDD14 /* Q2 */,
+				7AB212E3241BD7E1008BDD14 /* WonderlandBar */,
 				7AB212E2241BD7E1008BDD14 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +53,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7AB212E3241BD7E1008BDD14 /* Q2 */ = {
+		7AB212E3241BD7E1008BDD14 /* WonderlandBar */ = {
 			isa = PBXGroup;
 			children = (
 				7AB212E4241BD7E1008BDD14 /* AppDelegate.swift */,
@@ -64,7 +64,7 @@
 				7AB212EF241BD7E5008BDD14 /* LaunchScreen.storyboard */,
 				7AB212F2241BD7E5008BDD14 /* Info.plist */,
 			);
-			path = Q2;
+			path = WonderlandBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +286,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8PRWQ47YB;
-				INFOPLIST_FILE = Q2/Info.plist;
+				INFOPLIST_FILE = "/Users/pennyhuang/Desktop/App Development/100 Questions/WonderlandBar/WonderlandBar/WonderlandBar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +304,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8PRWQ47YB;
-				INFOPLIST_FILE = Q2/Info.plist;
+				INFOPLIST_FILE = "/Users/pennyhuang/Desktop/App Development/100 Questions/WonderlandBar/WonderlandBar/WonderlandBar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
