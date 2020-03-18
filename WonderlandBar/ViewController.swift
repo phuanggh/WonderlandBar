@@ -11,11 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     var finalScore = 0
+    
+//    var petNum = 0
     var score1 = 0
     var score2 = 0
     var score3 = 0
     var switchIsOn = false
     let imageArray = [["image0.jpg", "沿海地帶"],
+                      ["image1.jpg", "無眠"],
                       ["image2.jpg", "熱帶雨林"],
                       ["image3.jpg", "如果的事"],
                       ["image4.jpg", "不想睡"],
@@ -37,6 +40,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    
+    @IBAction func dismissNameKB(_ sender: Any) {
+    }
+    
+//    @IBAction func numEditingChanged(_ sender: Any) {
+//        if let petNum = Int(textField.text!) {
+//            self.petNum = petNum
+//        }
+//        print(petNum)
+//
+//    }
     
     @IBAction func segmented(_ sender: UISegmentedControl) {
         // score1
@@ -61,6 +75,8 @@ class ViewController: UIViewController {
     
     @IBAction func stepper(_ sender: UIStepper) {
         // score3
+//        sender.value = Double(petNum)
+        
         let stepperValue = Int(sender.value)
         textField.text = String(stepperValue)
         if stepperValue > 10 {
@@ -88,19 +104,19 @@ class ViewController: UIViewController {
         if switchStatus {
 
             if totalScore < 5 {
-                finalItemIndex = 3
+                finalItemIndex = 5
             } else if totalScore < 8 {
                 finalItemIndex = 4
             } else if totalScore < 11 {
-                finalItemIndex = 5
+                finalItemIndex = 3
             } else if totalScore < 16 {
                 finalItemIndex = 6
             } else if totalScore < 22 {
-                finalItemIndex = 7
-            } else if totalScore < 27 {
-                finalItemIndex = 8
-            } else {
                 finalItemIndex = 9
+            } else if totalScore < 27 {
+                finalItemIndex = 7
+            } else {
+                finalItemIndex = 8
             }
 
         } else {
