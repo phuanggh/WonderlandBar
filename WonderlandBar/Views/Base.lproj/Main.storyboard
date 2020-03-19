@@ -23,7 +23,7 @@
                                 <rect key="frame" x="148" y="134" width="212" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
                                 <connections>
                                     <action selector="dismissNameKB:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="zVW-aa-bqL"/>
                                 </connections>
@@ -81,7 +81,7 @@
                                     <action selector="stepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ps2-wg-Ouf"/>
                                 </connections>
                             </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpB-lu-MZp">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpB-lu-MZp">
                                 <rect key="frame" x="138" y="422" width="114" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.87450980389999999" green="0.86666666670000003" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -139,6 +139,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="numEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="1Oa-Hm-oAL"/>
+                                </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" text="請告訴我們關於你的一些事，我們將為你製作一杯專屬於你的神秘特調 🍹" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="91s-J4-5tO">
                                 <rect key="frame" x="79" y="713" width="257" height="96"/>
@@ -148,6 +151,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQl-ac-tLc">
+                                <rect key="frame" x="138" y="493" width="114" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.86666666670000003" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="隨機特調">
+                                    <color key="titleColor" red="0.12941176469999999" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqi-Yt-lYB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12941176470588234" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -156,13 +170,67 @@
                         <outlet property="imageView" destination="of6-qf-OWa" id="SFI-8j-I2n"/>
                         <outlet property="nameTextField" destination="AIk-eC-Xsg" id="aWs-st-btA"/>
                         <outlet property="sliderLabel" destination="jaf-3h-STM" id="i7c-ug-0Vf"/>
+                        <outlet property="stepperOutlet" destination="nag-hf-VP8" id="4Ec-vk-TtV"/>
                         <outlet property="textField" destination="Ktb-hw-duK" id="in4-3s-Zq0"/>
                         <outlet property="textView" destination="91s-J4-5tO" id="E91-RY-3sQ"/>
+                        <segue destination="eYj-Jz-vAb" kind="presentation" identifier="goToResultVC" modalPresentationStyle="fullScreen" id="QX5-0P-rZR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+            <point key="canvasLocation" x="148" y="127"/>
+        </scene>
+        <!--ResultVC-->
+        <scene sceneID="Fii-Pg-xO0">
+            <objects>
+                <viewController id="eYj-Jz-vAb" customClass="ResultVC" customModule="WonderlandBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zem-Ds-e5I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="Hmx-9Y-Mj4">
+                                <rect key="frame" x="0.0" y="84" width="414" height="728"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" text="請告訴我們關於你的一些事，我們將為你製作一杯專屬於你的神秘特調 🍹" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RCw-nB-F4L">
+                                <rect key="frame" x="78" y="400" width="257" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="—— Wonderland Bar ——" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJc-vg-wfF">
+                                <rect key="frame" x="16" y="46" width="382" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="35"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYf-sI-har">
+                                <rect key="frame" x="150" y="566" width="114" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.86666666670000003" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="再來一杯">
+                                    <color key="titleColor" red="0.12941176469999999" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnButtonPressed:" destination="eYj-Jz-vAb" eventType="touchUpInside" id="ZjU-Ry-vuR"/>
+                                    <action selector="submitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cv-0Q-Prl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="xy1-FI-Sm7"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Hmx-9Y-Mj4" id="JCX-fL-Ygq"/>
+                        <outlet property="resultTextView" destination="RCw-nB-F4L" id="hlh-na-cCq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G2a-6O-BE1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873.91304347826099" y="126.5625"/>
         </scene>
     </scenes>
     <resources>
