@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var score2 = 0
     var score3 = 0
     var switchIsOn = true
+    var month = ""
     
     let gradient = CAGradientLayer()
     
@@ -32,8 +33,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var pickerView: UIPickerView!
+    
     
     @IBAction func dismissNameKB(_ sender: Any) {
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     
@@ -118,7 +125,7 @@ class ViewController: UIViewController {
             let destinationVC = segue.destination as! ResultVC
             destinationVC.userName = userName
             destinationVC.finalItemIndex = finalItemIndex
-            
+            destinationVC.month = month
 //            let a = sender as! Int
 //            if a == 1 {
 //
@@ -153,8 +160,34 @@ class ViewController: UIViewController {
         gradient.colors = [CGColor(srgbRed: 0.13, green: 0.09, blue: 0.09, alpha: 1.0), UIColor.clear.cgColor,  UIColor.clear.cgColor, CGColor(srgbRed: 0.13, green: 0.09, blue: 0.09, alpha: 1.0)]
         gradient.locations = [0, 0.35, 0.9, 1]
         imageView.layer.addSublayer(gradient)
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
     }
-
-
 }
 
+
+
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return imageBrain.monthList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let displayMonth = imageBrain.monthList[row]
+        
+        return displayMonth
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        month = imageBrain.monthList[row]
+    }
+    
+    
+}
