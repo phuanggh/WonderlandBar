@@ -47,7 +47,7 @@ class ResultVC: UIViewController {
         
         if month == "December" {
             let skView = SKView(frame: view.frame)
-            view.addSubview(skView)
+            view.insertSubview(skView, at: 0)
             skView.allowsTransparency = true
             let scene = SKScene(size: skView.frame.size)
             scene.anchorPoint = CGPoint(x: 0.5, y: 0.9)

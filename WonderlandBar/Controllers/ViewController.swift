@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     var score2 = 0
     var score3 = 0
     var switchIsOn = true
-    var month = ""
+    var month = "January"
     
     let gradient = CAGradientLayer()
     
@@ -47,13 +47,11 @@ class ViewController: UIViewController {
     @IBAction func numEditingChanged(_ sender: Any) {
         if let textFieldValue = Double(textField.text!) {
             stepperOutlet.value = textFieldValue
-//            print(textFieldValue)
             if Int(textFieldValue) > 10 {
                 score3 = 10
             } else {
                 score3 = Int(textFieldValue)
             }
-//            print(Int(textFieldValue))
         }
         
     }
@@ -106,7 +104,6 @@ class ViewController: UIViewController {
     @IBAction func submitPressed(_ sender: Any) {
         finalItemIndex = imageBrain.calculator(switchStatus: switchIsOn, score1: score1, score2: score2, score3: score3)
         performSegue(withIdentifier: "goToResultVC", sender: 1)
-//        print("score: \(finalItemIndex)")
         
     }
     
@@ -114,7 +111,6 @@ class ViewController: UIViewController {
     @IBAction func randomButtonPressed(_ sender: Any) {
         finalItemIndex = Int.random(in: 0...9)
         performSegue(withIdentifier: "goToResultVC", sender: 2)
-//        print("random: \(finalItemIndex)")
     }
     
     
