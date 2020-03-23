@@ -53,7 +53,6 @@ class ViewController: UIViewController {
                 score3 = Int(textFieldValue)
             }
         }
-        
     }
     
     
@@ -184,6 +183,5 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         month = imageBrain.monthList[row]
     }
-    
     
 }

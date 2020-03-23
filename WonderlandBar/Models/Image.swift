@@ -11,9 +11,5 @@ import Foundation
 struct Image {
     let fileName: String
     let displayName: String
-    init(fileName: String, displayName: String) {
-        self.fileName = fileName
-        self.displayName = displayName
-    }
 
 }
