@@ -121,28 +121,6 @@ class ViewController: UIViewController {
             destinationVC.userName = userName
             destinationVC.finalItemIndex = finalItemIndex
             destinationVC.month = month
-//            let a = sender as! Int
-//            if a == 1 {
-//
-//            }
-//
-//            print(sender)
-//            //處理這行 button.tag沒有動作
-//            if let button = sender as? UIButton {
-//                print(button)
-//                if button.tag == 1 {
-////                    print(button.tag)
-//                    destinationVC.finalItemIndex = finalItemIndex
-//                    destinationVC.userName = userName
-//                    print(finalItemIndex, userName)
-//                } else {
-////                    print(button.tag)
-//                    destinationVC.finalItemIndex = 0
-//                    destinationVC.userName = "userName"
-//
-//                }
-////                print(finalItemIndex, userName)
-//            }
             
         }
         
