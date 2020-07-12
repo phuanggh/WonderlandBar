@@ -10,5 +10,4 @@ For more details about this app, please see Medium articles:
 
 # Demo
 ![image](DemoImages/WonderlandBarDemo1.gif) 
-<br>
 ![image](DemoImages/WonderlandBarDemo2.gif) 
