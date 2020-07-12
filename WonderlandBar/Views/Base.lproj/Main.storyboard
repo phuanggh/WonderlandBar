@@ -202,28 +202,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="Hmx-9Y-Mj4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="Hmx-9Y-Mj4">
                                 <rect key="frame" x="0.0" y="84" width="414" height="728"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" text="親愛的顧客，這是專屬於你的神秘特調 🍹" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RCw-nB-F4L">
-                                <rect key="frame" x="78" y="400" width="257" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" text="親愛的顧客，這是專屬於你的神秘特調 🍹" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RCw-nB-F4L">
+                                <rect key="frame" x="77" y="398" width="260" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="Pic-bg-8tR"/>
+                                    <constraint firstAttribute="height" constant="100" id="jDc-mu-3aL"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="—— Wonderland Bar ——" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJc-vg-wfF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="—— Wonderland Bar ——" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJc-vg-wfF">
                                 <rect key="frame" x="16" y="46" width="382" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="35"/>
                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYf-sI-har">
-                                <rect key="frame" x="150" y="764" width="114" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYf-sI-har">
+                                <rect key="frame" x="150" y="772" width="114" height="30"/>
                                 <color key="backgroundColor" red="0.87450980389999999" green="0.86666666670000003" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="再來一杯">
                                     <color key="titleColor" red="0.12941176469999999" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -235,6 +235,20 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12941176470588234" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xy1-FI-Sm7" firstAttribute="trailing" secondItem="pYf-sI-har" secondAttribute="trailing" constant="150" id="HvW-PH-6ZG"/>
+                            <constraint firstItem="BJc-vg-wfF" firstAttribute="leading" secondItem="xy1-FI-Sm7" secondAttribute="leading" constant="16" id="JEP-kE-uPP"/>
+                            <constraint firstItem="xy1-FI-Sm7" firstAttribute="bottom" secondItem="pYf-sI-har" secondAttribute="bottom" constant="60" id="JFH-4T-5fs"/>
+                            <constraint firstItem="RCw-nB-F4L" firstAttribute="centerX" secondItem="Zem-Ds-e5I" secondAttribute="centerX" id="OSa-8y-oGS"/>
+                            <constraint firstItem="xy1-FI-Sm7" firstAttribute="bottom" secondItem="Hmx-9Y-Mj4" secondAttribute="bottom" constant="50" id="Ob0-53-wVm"/>
+                            <constraint firstItem="Hmx-9Y-Mj4" firstAttribute="trailing" secondItem="xy1-FI-Sm7" secondAttribute="trailing" id="QGw-HD-bcb"/>
+                            <constraint firstItem="Hmx-9Y-Mj4" firstAttribute="leading" secondItem="xy1-FI-Sm7" secondAttribute="leading" id="Xdp-2Y-dse"/>
+                            <constraint firstItem="pYf-sI-har" firstAttribute="leading" secondItem="xy1-FI-Sm7" secondAttribute="leading" constant="150" id="Xna-FC-0lw"/>
+                            <constraint firstItem="Hmx-9Y-Mj4" firstAttribute="top" secondItem="xy1-FI-Sm7" secondAttribute="top" constant="40" id="fB1-6R-uNk"/>
+                            <constraint firstItem="xy1-FI-Sm7" firstAttribute="trailing" secondItem="BJc-vg-wfF" secondAttribute="trailing" constant="16" id="tqA-2a-tu9"/>
+                            <constraint firstItem="BJc-vg-wfF" firstAttribute="top" secondItem="xy1-FI-Sm7" secondAttribute="top" constant="2" id="wUS-Aw-ofj"/>
+                            <constraint firstItem="RCw-nB-F4L" firstAttribute="centerY" secondItem="Zem-Ds-e5I" secondAttribute="centerY" id="xgc-eU-1i5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xy1-FI-Sm7"/>
                     </view>
                     <connections>
