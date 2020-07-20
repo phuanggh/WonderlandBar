@@ -1,4 +1,15 @@
 # Wonderland Bar
+This app is an exercise of basic UI elements.
+- Label
+- Button
+- Swich
+- Stepper
+- Text Field
+- Picker View
+- Slider
+- SpriteKit
+- Gradient Layer
+
 ### Medium Articles
 For more details about this app, please see Medium articles:
 <br>
