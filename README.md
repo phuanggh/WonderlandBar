@@ -7,6 +7,7 @@ This app is an exercise of basic UI elements.
 - Text Field
 - Picker View
 - Slider
+- Segmented Control
 - SpriteKit
 - Gradient Layer
 
